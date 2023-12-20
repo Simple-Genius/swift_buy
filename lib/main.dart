@@ -7,10 +7,13 @@ import 'app/routes/app_pages.dart';
 
 void main() {
   Get.put<DataService>(DataService());
+//   await Firebase.initializeApp(
+//     options: DefaultFirebaseOptions.currentPlatform,
+// );
   runApp(
     GetMaterialApp(
       title: "Application",
-      initialRoute: AppPages.INITIAL,
+      initialRoute: Routes.SIGN_UP,
       getPages: AppPages.routes,
     ),
   );
