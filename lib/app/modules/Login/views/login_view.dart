@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:swift_buy/app/modules/SignUp/views/sign_up_view.dart';
 import 'package:swift_buy/app/widgets/details_field.dart';
 
 import '../controllers/login_controller.dart';
@@ -72,7 +73,7 @@ class LoginView extends GetView<LoginController> {
                   const Text('Create new account?'),
                   TextButton(
                       onPressed: () {
-                        //  Get.to(() => const SignupView());
+                        Get.to(() => const SignUpView());
                       },
                       child: const Text(
                         'Sign Up',
@@ -83,9 +84,7 @@ class LoginView extends GetView<LoginController> {
               const SizedBox(height: 10),
               Align(
                   child: ElevatedButton(
-                      onPressed: () {
-                        // print('${controller.emailController.text}');
-                      },
+                      onPressed: controller.signIn,
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10)),

@@ -1,5 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:swift_buy/app/data/service.dart';
+import 'package:swift_buy/app/modules/home/views/home_view.dart';
 
 class LoginController extends GetxController {
   //TODO: Implement LoginController
@@ -12,13 +15,13 @@ class LoginController extends GetxController {
     super.onInit();
   }
 
-  // void signIn() async {
-  //   User? user = await authService.signInWithEmailAndPassword(
-  //       emailController.text, passwordController.text);
-  //   if (user != null) {
-  //     Get.to(() => HomeView());
-  //   }
-  // }
+  void signIn() async {
+    User? user = await authService.signInWithEmailAndPassword(
+        emailController.text, passwordController.text);
+    if (user != null) {
+      Get.to(() => const HomeView());
+    }
+  }
 
   @override
   void onReady() {

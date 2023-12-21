@@ -21,13 +21,13 @@ class SignUpView extends GetView<SignUpController> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
+                  const Text(
                     'Welcome\nUser',
                     style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
                   ),
                   Stack(
                     children: [
-                      CircleAvatar(
+                      const CircleAvatar(
                         backgroundColor: Color(0xff999999),
                         radius: 60,
                       ),
@@ -44,7 +44,7 @@ class SignUpView extends GetView<SignUpController> {
                 ],
               ),
               const SizedBox(height: 10),
-              Text(
+              const Text(
                 'Sign up to join',
                 style:
                     TextStyle(color: const Color.fromARGB(255, 146, 141, 141)),
@@ -111,7 +111,7 @@ class SignUpView extends GetView<SignUpController> {
               const SizedBox(height: 10),
               Align(
                   child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: controller.signUp,
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10)),
